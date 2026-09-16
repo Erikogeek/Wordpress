@@ -19,9 +19,9 @@
 ## 1- Description
 This project provides a WordPress installation running with Docker Compose.
 The setup consists of two services:
-* `WordPress`: The web application: (`https://hub.docker.com/_/wordpress`)
-* `MariaDB`: The database used by WordPress:(`https://hub.docker.com/_/mariadb`)
-For more informations:
+* `WordPress`: The web application: `https://hub.docker.com/_/wordpress`
+* `MariaDB`: The database used by WordPress:`https://hub.docker.com/_/mariadb`
+
 Docker Compose creates a shared network between both services and a persistent volume for the MariaDB database.
 
 The purpose of this repository is to provide a simple, reproducible, and persistent WordPress environment that can be started and managed with Docker Compose.
@@ -29,8 +29,8 @@ The purpose of this repository is to provide a simple, reproducible, and persist
 ## 2- Requirements
 The following software is required:
 * Docker
-* Docker Compose: (``https://docs.docker.com/compose``)
-* A web browser(https://wordpress.org/documentation/): `https://wordpress.org/documentation/`
+* Docker Compose: `https://docs.docker.com/compose`
+* A web browser: `https://wordpress.org/documentation/`
 Docker Desktop can be used on Windows, macOS, and Linux systems with Docker support.
 
 ## 3- Quickstart
@@ -154,10 +154,10 @@ docker compose logs db
 
 Verify the database variables in `.env`:
 
-`MYSQL_DATABASE=wordpress`
-`MYSQL_USER=wordpress`
-`MYSQL_PASSWORD=CHANGE_ME`
-`MYSQL_ROOT_PASSWORD=CHANGE_ME`
+* `MYSQL_DATABASE=wordpress`
+* `MYSQL_USER=wordpress`
+* `MYSQL_PASSWORD=CHANGE_ME`
+* `MYSQL_ROOT_PASSWORD=CHANGE_ME`
 Also verify that both services are running:
 ```bash
 docker compose ps
