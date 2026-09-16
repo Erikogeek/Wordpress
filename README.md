@@ -19,9 +19,9 @@
 ## 1- Description
 This project provides a WordPress installation running with Docker Compose.
 The setup consists of two services:
-* `WordPress`: The web application. [`https://hub.docker.com/_/wordpress`](#https://hub.docker.com/_/wordpress)
-* `MariaDB`: The database used by WordPress. 
-For more informations:`https://hub.docker.com/_/mariadb`
+* `WordPress(https://wordpress.org/documentation/)`: The web application: `https://hub.docker.com/_/wordpress`
+* `MariaDB(https://hub.docker.com/_/mariadb)`: The database used by WordPress:`https://hub.docker.com/_/mariadb`
+For more informations:
 Docker Compose creates a shared network between both services and a persistent volume for the MariaDB database.
 
 The purpose of this repository is to provide a simple, reproducible, and persistent WordPress environment that can be started and managed with Docker Compose.
@@ -29,8 +29,8 @@ The purpose of this repository is to provide a simple, reproducible, and persist
 ## 2- Requirements
 The following software is required:
 * Docker
-* Docker Compose: ``https://docs.docker.com/compose``
-* A web browser: `https://wordpress.org/documentation/`
+* Docker Compose(https://docs.docker.com/compose): ``https://docs.docker.com/compose``
+* A web browser(https://wordpress.org/documentation/): `https://wordpress.org/documentation/`
 Docker Desktop can be used on Windows, macOS, and Linux systems with Docker support.
 
 ## 3- Quickstart
