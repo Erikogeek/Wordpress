@@ -158,6 +158,7 @@ Verify the database variables in `.env`:
 * `MYSQL_USER=wordpress`
 * `MYSQL_PASSWORD=CHANGE_ME`
 * `MYSQL_ROOT_PASSWORD=CHANGE_ME`
+
 Also verify that both services are running:
 ```bash
 docker compose ps
