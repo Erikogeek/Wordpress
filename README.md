@@ -1,18 +1,25 @@
 # Wordpress Docker Project
 ## Table of Description
 [1- Description](#Description)
+
 [2- Requirements](#Requirements)
+
 [3- Quickstart](#Quickstart)
+
 [4- Usage](#Usage)
+
 [5- Configuration](#Configuration)
+
 [6- Persitence](#Persitence)
+
 [7- Security](#Security)
+
 [8-Troubleshooting](#Troubleshooting)
 
 ## 1- Description
 This project provides a WordPress installation running with Docker Compose.
 The setup consists of two services:
-* `WordPress`: The web application. `https://hub.docker.com/_/wordpress`
+* `WordPress`: The web application. [`https://hub.docker.com/_/wordpress`](#https://hub.docker.com/_/wordpress)
 * `MariaDB`: The database used by WordPress. 
 For more informations:`https://hub.docker.com/_/mariadb`
 Docker Compose creates a shared network between both services and a persistent volume for the MariaDB database.
