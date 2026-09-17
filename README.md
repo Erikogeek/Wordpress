@@ -1,22 +1,15 @@
 # Wordpress Docker Project
 ## Table of Description
-[1- Description](#Description)
+- [Description](#Description)
+- [Requirements](#Requirements)
+- [Quickstart](#Quickstart)
+- [Usage](#Usage)
+- [Configuration](#Configuration)
+- [Persitence](#Persitence)
+- [Security](#Security)
+- [Troubleshooting](#Troubleshooting)
 
-[2- Requirements](#Requirements)
-
-[3- Quickstart](#Quickstart)
-
-[4- Usage](#Usage)
-
-[5- Configuration](#Configuration)
-
-[6- Persitence](#Persitence)
-
-[7- Security](#Security)
-
-[8-Troubleshooting](#Troubleshooting)
-
-## 1- Description
+## Description
 This project provides a WordPress installation running with Docker Compose.
 The setup consists of two services:
 * `WordPress`: The web application: `https://hub.docker.com/_/wordpress`
@@ -26,14 +19,13 @@ Docker Compose creates a shared network between both services and a persistent v
 
 The purpose of this repository is to provide a simple, reproducible, and persistent WordPress environment that can be started and managed with Docker Compose.
 
-## 2- Requirements
+## Requirements
 The following software is required:
 * Docker
 * Docker Compose: `https://docs.docker.com/compose`
 * A web browser: `https://wordpress.org/documentation/`
-Docker Desktop can be used on Windows, macOS, and Linux systems with Docker support.
 
-## 3- Quickstart
+## Quickstart
 - Clone the repository.
 - Create a `.env` file based on `.env.example`.
 - Configure the required database variables.
@@ -57,7 +49,7 @@ To start it again:
 ```bash
 docker compose up -d
 ```
-## 4- Usage
+## Usage
 ### Starting the application
 Start the WordPress and database services in detached mode:
 ```bash
@@ -82,16 +74,12 @@ To start the services again after stopping them:
 docker compose up -d
 ```
 
-## 5- Configration
+## Configration
 The project uses environment variables for configuration.
 Sensitive values such as database passwords must not be stored directly in the Git repository.
 Create a `.env` file in the project root and configure the required variables:
 
-`MYSQL_DATABASE`=wordpress
-`MYSQL_USER`=wordpress
-`MYSQL_PASSWORD`=CHANGE_ME
-`MYSQL_ROOT_PASSWORD`=CHANGE_ME
-The `.env` file is excluded from Git by `.gitignore`.
+This `.env` file is excluded from Git by `.gitignore`.
 
 The `.env.example` file provides a template without real credentials.
 Changing the WordPress port
@@ -108,7 +96,7 @@ For example, changing it to:
 would make WordPress available at:
 `http://localhost:9090`
 
-## 6- Persistence
+## Persistence
 The MariaDB service uses a named Docker volume:
 
 `volumes`:
@@ -125,7 +113,8 @@ docker compose up -d
 ```
 does not remove the db_data volume.
 The database volume must not be removed when persistent data is required.
-## 7- Security
+
+## Security
 
 The following security principles are used in this project:
 * Passwords are provided through environment variables.
@@ -135,7 +124,8 @@ The following security principles are used in this project:
 * No IP addresses or other sensitive infrastructure information are stored in the repository.
 * `.env.example` contains placeholders instead of real credentials.
 Never commit the `.env` file or other files containing credentials to the repository.
-## 8- Troubeshooting
+
+## Troubleshooting
 ### WordPress is not reachable
 Check whether the containers are running:
 
@@ -153,12 +143,12 @@ docker compose logs db
 ```
 ### WordPress cannot connect to the database
 
-Verify the database variables in `.env`:
+Verify the the value of variables database in `.env`:
 
-* `MYSQL_DATABASE=wordpress`
-* `MYSQL_USER=wordpress`
-* `MYSQL_PASSWORD=CHANGE_ME`
-* `MYSQL_ROOT_PASSWORD=CHANGE_ME`
+* `MYSQL_DATABASE= your Wordpress_DB_name`
+* `MYSQL_USER= your wordpress_DB_user`
+* `MYSQL_PASSWORD= your Password for MariaDB`
+* `MYSQL_ROOT_PASSWORD=your Root Password for MariaDB`
 
 Also verify that both services are running:
 ```bash
@@ -175,7 +165,7 @@ Afterwards, the environment can be recreated with:
 docker compose up -d
 ```
 
-## 9- File descriptions
+## File descriptions
 
 * `.env`: Local environment configuration containing sensitive values. Not committed to Git.
 * `.env.example`: Example environment configuration without real credentials.
