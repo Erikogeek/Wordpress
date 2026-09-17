@@ -47,6 +47,7 @@ docker compose ps
 ```
 - Open WordPress in a web browser:
 `http://localhost:8080`
+- By installation on the server please use:`http://SERVER_IP:8080`
 - Complete the WordPress installation in the browser.
 To stop the setup:
 ```bash
