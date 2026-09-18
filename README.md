@@ -28,11 +28,26 @@ The following software is required:
 ## Quickstart
 - Clone the repository.
 - Create a `.env` file based on `.env.example`.
+```bash
+cp .env.example .env
+```
 - Configure the required database variables.
+Open the .env file and configure.
+```bash
+nano .env
+```
+The required database variables look like:
+* `MYSQL_DATABASE= your Wordpress_DB_name`
+* `MYSQL_USER= your wordpress_DB_user`
+* `MYSQL_PASSWORD= your Password for MariaDB`
+* `MYSQL_ROOT_PASSWORD=your Root Password for MariaDB`
+
 - Start the services using:
 ```bash
 docker compose up -d
 ```
+The `-d` option runs the containers in the background.
+
 - Check the running containers:
 ```bash
 docker compose ps
@@ -55,7 +70,6 @@ Start the WordPress and database services in detached mode:
 ```bash
 docker compose up -d
 ```
-The `-d` option runs the containers in the background.
 ### Checking the services
 Use:
 ```bash
@@ -73,7 +87,6 @@ To start the services again after stopping them:
 ```bash
 docker compose up -d
 ```
-
 ## Configration
 The project uses environment variables for configuration.
 Sensitive values such as database passwords must not be stored directly in the Git repository.
