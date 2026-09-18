@@ -42,7 +42,7 @@ The required database variables look like:
 * `MYSQL_PASSWORD= your Password for MariaDB`
 * `MYSQL_ROOT_PASSWORD=your Root Password for MariaDB`
 
-- Start the services using:
+Start the services using:
 ```bash
 docker compose up -d
 ```
@@ -65,24 +65,24 @@ To start it again:
 docker compose up -d
 ```
 ## Usage
-### Starting the application
+* Starting the application
 Start the WordPress and database services in detached mode:
 ```bash
 docker compose up -d
 ```
-### Checking the services
+* Checking the services
 Use:
 ```bash
 docker compose ps
 ```
 to check whether the WordPress and database containers are running.
-### Stopping the application
+* Stopping the application
 Use
 ```bash
 docker compose down
 ```
 This removes the running containers and the Compose network but keeps the database volume.
-### Restarting the application
+* Restarting the application
 To start the services again after stopping them:
 ```bash
 docker compose up -d
@@ -139,7 +139,7 @@ The following security principles are used in this project:
 Never commit the `.env` file or other files containing credentials to the repository.
 
 ## Troubleshooting
-### WordPress is not reachable
+* WordPress is not reachable
 Check whether the containers are running:
 
 ```bash
@@ -154,7 +154,7 @@ Check the database logs:
 ```bash
 docker compose logs db
 ```
-### WordPress cannot connect to the database
+* WordPress cannot connect to the database
 
 Verify the the value of variables database in `.env`:
 
@@ -167,7 +167,7 @@ Also verify that both services are running:
 ```bash
 docker compose ps
 ```
-### Resetting the complete environment
+* Resetting the complete environment
 Removing the database volume deletes the persistent database data.
 This command should therefore only be used when a complete reset is intended:
 ```bash
