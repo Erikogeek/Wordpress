@@ -17,9 +17,8 @@ The setup consists of two services:
 
 Docker Compose creates a shared network between both services and a persistent volume for the MariaDB database.
 
-The purpose of this repository is to provide a simple, reproducible, and persistent WordPress environment that can be started and managed with Docker Compose.
-
 ## Requirements
+The purpose of this repository is to provide a simple, reproducible, and persistent WordPress environment that can be started and managed with Docker Compose.
 The following software is required:
 * Docker
 * Docker Compose: `https://docs.docker.com/compose`
